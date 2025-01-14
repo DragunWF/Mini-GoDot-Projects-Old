@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tilesheet/platformPack_tilesheet.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 448, 224 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -318, -124 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+

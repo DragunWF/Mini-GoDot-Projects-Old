@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Stuff/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stuff/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Stuff/Fall Zone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Stuff/ParallaxBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Stuff/Goal.tscn" type="PackedScene" id=5]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1540, 900 )
+current = true
+zoom = Vector2( 3, 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 162.771, 202.132 )
+
+[node name="Platform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 481.937, 498.528 )
+
+[node name="Platform2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1255.61, 687.742 )
+
+[node name="Platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2054.51, 876.955 )
+
+[node name="Platform4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2621.59, 1417.35 )
+
+[node name="Platform5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1800.99, 1417.35 )
+
+[node name="Platform6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 677.602, 1575.95 )
+
+[node name="Fall Zone" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1808.08, 2121.58 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+
+[node name="Goal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 665.639, 1364.5 )
+

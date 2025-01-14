@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesheet/platformPack_tilesheet.png" type="Texture" id=1]
+[ext_resource path="res://Stuff/Spikes.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 14.3068 )
+
+[node name="EntitySet" type="Node2D"]
+position = Vector2( 448, 224 )
+
+[node name="Spikes" type="Sprite" parent="."]
+position = Vector2( -352, -113.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 348.874, 64, 35.1265 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Spikebox" type="Area2D" parent="Spikes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spikebox"]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Spikes/Spikebox" to="Spikes" method="_on_Spikebox_body_entered"]

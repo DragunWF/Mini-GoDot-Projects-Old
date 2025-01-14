@@ -1,0 +1,164 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Game Modes/PvE/Normal.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/zap1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://User Interface/Kenney Future.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Backgrounds/blue.png" type="Texture" id=5]
+[ext_resource path="res://Characters/Enemy/Enemy3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Characters/Enemy/Enemy2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Stuff/Wall.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Normal" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 528 )
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="YouWin" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="YouWin" type="Control" parent="YouWin"]
+visible = false
+modulate = Color( 0, 0.858824, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="YouWin/YouWin"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="YouWin/YouWin/CenterContainer"]
+margin_left = 421.0
+margin_top = 249.0
+margin_right = 603.0
+margin_bottom = 351.0
+
+[node name="Title" type="Label" parent="YouWin/YouWin/CenterContainer/VBoxContainer"]
+margin_right = 182.0
+margin_bottom = 18.0
+text = "You Win!"
+align = 1
+
+[node name="Next" type="Button" parent="YouWin/YouWin/CenterContainer/VBoxContainer"]
+margin_top = 22.0
+margin_right = 182.0
+margin_bottom = 46.0
+text = "Next Difficulty"
+
+[node name="Retry" type="Button" parent="YouWin/YouWin/CenterContainer/VBoxContainer"]
+margin_top = 50.0
+margin_right = 182.0
+margin_bottom = 74.0
+text = "Retry"
+
+[node name="Quit" type="Button" parent="YouWin/YouWin/CenterContainer/VBoxContainer"]
+margin_top = 78.0
+margin_right = 182.0
+margin_bottom = 102.0
+text = "Quit"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="1" type="Sprite" parent="ParallaxBackground/Background"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="2" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 256, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="3" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 512, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="4" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 768, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="5" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 768, 256 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="6" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 512, 256 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="7" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 256, 256 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="8" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 0, 256 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="9" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 0, 512 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="10" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 256, 512 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="11" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 512, 512 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="12" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 768, 512 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 512, 64 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 7 )]
+position = Vector2( 64, 176 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 7 )]
+position = Vector2( 960, 263 )
+
+[node name="Walls" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="1" parent="Walls" instance=ExtResource( 8 )]
+position = Vector2( -32, 384 )
+
+[node name="2" parent="Walls" instance=ExtResource( 8 )]
+position = Vector2( 1056, 384 )
+
+[connection signal="pressed" from="YouWin/YouWin/CenterContainer/VBoxContainer/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="YouWin/YouWin/CenterContainer/VBoxContainer/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="YouWin/YouWin/CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="tree_exited" from="Enemies/Enemy" to="." method="_on_Enemy_tree_exited"]
+[connection signal="tree_exited" from="Enemies/Enemy2" to="." method="_on_Enemy2_tree_exited"]
+[connection signal="tree_exited" from="Enemies/Enemy3" to="." method="_on_Enemy3_tree_exited"]

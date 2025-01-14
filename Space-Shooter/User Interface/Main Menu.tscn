@@ -1,0 +1,318 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://User Interface/Kenney Future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://User Interface/Main Menu.gd" type="Script" id=2]
+[ext_resource path="res://Audio/click1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Backgrounds/blue.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Main Menu" type="Control"]
+pause_mode = 2
+modulate = Color( 0, 0.858824, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+scroll_ignore_camera_zoom = true
+
+[node name="Background" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 128, 128 )
+texture = ExtResource( 4 )
+
+[node name="Background2" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 128, 384 )
+texture = ExtResource( 4 )
+
+[node name="Background3" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 128, 640 )
+texture = ExtResource( 4 )
+
+[node name="Background4" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 384, 128 )
+texture = ExtResource( 4 )
+
+[node name="Background5" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 384, 384 )
+texture = ExtResource( 4 )
+
+[node name="Background6" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 384, 640 )
+texture = ExtResource( 4 )
+
+[node name="Background7" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 640, 128 )
+texture = ExtResource( 4 )
+
+[node name="Background8" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 640, 384 )
+texture = ExtResource( 4 )
+
+[node name="Background9" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 640, 640 )
+texture = ExtResource( 4 )
+
+[node name="Background10" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 896, 128 )
+texture = ExtResource( 4 )
+
+[node name="Background11" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 896, 384 )
+texture = ExtResource( 4 )
+
+[node name="Background12" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 896, 640 )
+texture = ExtResource( 4 )
+
+[node name="StartMenu" type="CenterContainer" parent="."]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartMenu"]
+margin_left = 450.0
+margin_top = 246.0
+margin_right = 574.0
+margin_bottom = 354.0
+
+[node name="Play" type="Button" parent="StartMenu/VBoxContainer"]
+margin_right = 124.0
+margin_bottom = 24.0
+text = "Play Game"
+
+[node name="Credits" type="Button" parent="StartMenu/VBoxContainer"]
+margin_top = 28.0
+margin_right = 124.0
+margin_bottom = 52.0
+text = "Credits"
+
+[node name="Controls" type="Button" parent="StartMenu/VBoxContainer"]
+margin_top = 56.0
+margin_right = 124.0
+margin_bottom = 80.0
+text = "Controls"
+
+[node name="Quit" type="Button" parent="StartMenu/VBoxContainer"]
+margin_top = 84.0
+margin_right = 124.0
+margin_bottom = 108.0
+text = "Quit Game"
+
+[node name="ChooseMode" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChooseMode"]
+margin_left = 400.0
+margin_top = 249.0
+margin_right = 623.0
+margin_bottom = 351.0
+
+[node name="Choose" type="Label" parent="ChooseMode/VBoxContainer"]
+margin_right = 233.0
+margin_bottom = 18.0
+text = "Choose Mode:"
+align = 1
+
+[node name="PvE" type="Button" parent="ChooseMode/VBoxContainer"]
+margin_top = 22.0
+margin_right = 233.0
+margin_bottom = 46.0
+text = "Player Vs Ai"
+
+[node name="PvP" type="Button" parent="ChooseMode/VBoxContainer"]
+margin_top = 50.0
+margin_right = 233.0
+margin_bottom = 74.0
+text = "Player vs Player"
+
+[node name="Back" type="Button" parent="ChooseMode/VBoxContainer"]
+margin_top = 106.0
+margin_right = 233.0
+margin_bottom = 130.0
+text = "Back to Start Menu"
+
+[node name="ChooseDifficulty" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChooseDifficulty"]
+margin_left = 411.0
+margin_top = 249.0
+margin_right = 612.0
+margin_bottom = 351.0
+
+[node name="Title" type="Label" parent="ChooseDifficulty/VBoxContainer"]
+margin_right = 201.0
+margin_bottom = 18.0
+text = "Choose Difficulty:"
+align = 1
+
+[node name="Easy" type="Button" parent="ChooseDifficulty/VBoxContainer"]
+margin_top = 22.0
+margin_right = 201.0
+margin_bottom = 46.0
+text = "Easy"
+
+[node name="Normal" type="Button" parent="ChooseDifficulty/VBoxContainer"]
+margin_top = 50.0
+margin_right = 201.0
+margin_bottom = 74.0
+text = "Normal"
+
+[node name="Hard" type="Button" parent="ChooseDifficulty/VBoxContainer"]
+margin_top = 78.0
+margin_right = 201.0
+margin_bottom = 102.0
+text = "Hard"
+
+[node name="Credits" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits"]
+margin_left = 330.0
+margin_top = 249.0
+margin_right = 694.0
+margin_bottom = 351.0
+
+[node name="Credits" type="Label" parent="Credits/VBoxContainer"]
+margin_right = 364.0
+margin_bottom = 102.0
+text = "Credits:
+
+Game Created by: The Animator
+
+Game Sprites and Audio by: Kenney"
+align = 1
+
+[node name="CreditsButton" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 176.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsButton"]
+margin_left = 400.0
+margin_top = 200.0
+margin_right = 623.0
+margin_bottom = 224.0
+
+[node name="BackC" type="Button" parent="CreditsButton/VBoxContainer"]
+margin_right = 223.0
+margin_bottom = 24.0
+text = "Back to Start Menu"
+
+[node name="Controls" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls"]
+margin_left = 356.0
+margin_top = 77.0
+margin_right = 667.0
+margin_bottom = 522.0
+
+[node name="Title" type="Label" parent="Controls/VBoxContainer"]
+margin_right = 311.0
+margin_bottom = 417.0
+text = "Controls:
+
+Player vs AI:
+Right Arrow Key - Move Right
+Left Arrow Key - Move Left
+Space Key - Shoot
+Esc Key - Pause
+
+Player vs Player:
+
+Player 1 Controls:
+Right Arrow Key - Move Right
+Left Arrow Key - Move Left
+Down Arrow Key - Shoot
+
+Player 2 Controls:
+A Key - Move Right
+D Key - Move Left
+S Key - Shoot
+"
+align = 1
+
+[node name="BackC2" type="Button" parent="Controls/VBoxContainer"]
+margin_top = 421.0
+margin_right = 311.0
+margin_bottom = 445.0
+text = "Back to Start Menu"
+
+[node name="PvP" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PvP"]
+margin_left = 316.0
+margin_top = 259.0
+margin_right = 707.0
+margin_bottom = 340.0
+
+[node name="Note" type="Label" parent="PvP/VBoxContainer"]
+margin_right = 391.0
+margin_bottom = 81.0
+text = "Unlike in Player vs AI, You're rate of
+fire in this mode is much faster. You
+can even hold the fire button to
+continuously shoot lasers."
+align = 1
+
+[node name="PvPButton" type="CenterContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 144.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PvPButton"]
+margin_left = 437.0
+margin_top = 216.0
+margin_right = 587.0
+margin_bottom = 240.0
+
+[node name="PlayPvP" type="Button" parent="PvPButton/VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 24.0
+text = "Start Match"
+
+[connection signal="pressed" from="StartMenu/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="StartMenu/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="ChooseMode/VBoxContainer/PvE" to="." method="_on_PvE_pressed"]
+[connection signal="pressed" from="ChooseMode/VBoxContainer/PvP" to="." method="_on_PvP_pressed"]
+[connection signal="pressed" from="ChooseMode/VBoxContainer/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="ChooseDifficulty/VBoxContainer/Easy" to="." method="_on_Easy_pressed"]
+[connection signal="pressed" from="ChooseDifficulty/VBoxContainer/Normal" to="." method="_on_Normal_pressed"]
+[connection signal="pressed" from="ChooseDifficulty/VBoxContainer/Hard" to="." method="_on_Hard_pressed"]
+[connection signal="pressed" from="CreditsButton/VBoxContainer/BackC" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="CreditsButton/VBoxContainer/BackC" to="." method="_on_BackC_pressed"]
+[connection signal="pressed" from="Controls/VBoxContainer/BackC2" to="." method="_on_BackC2_pressed"]
+[connection signal="pressed" from="PvPButton/VBoxContainer/PlayPvP" to="." method="_on_PlayPvP_pressed"]

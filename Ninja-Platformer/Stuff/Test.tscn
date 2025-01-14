@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://platform2d-example/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://platform2d-example/jump_pad/jump_pad.tscn" type="PackedScene" id=2]
+[ext_resource path="res://platform2d-example/smart_textures_test.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 266.967, 332.43 )
+
+[node name="JumpPad" parent="." instance=ExtResource( 2 )]
+position = Vector2( 571.914, 370.085 )
+
+[node name="Target" type="Position2D" parent="JumpPad"]
+position = Vector2( 0, -100 )
+
+[node name="Platform2DTest" parent="." instance=ExtResource( 3 )]
+position = Vector2( -519.295, -678.828 )
+

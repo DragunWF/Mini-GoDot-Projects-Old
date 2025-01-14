@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/knifeSlice2.ogg-d027a5218a7918acf0894eda2876cfdd.oggstr"
+
+[deps]
+
+source_file="res://Audio/RPG Audio/knifeSlice2.ogg"
+dest_files=[ "res://.import/knifeSlice2.ogg-d027a5218a7918acf0894eda2876cfdd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

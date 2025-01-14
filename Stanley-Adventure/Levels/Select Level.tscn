@@ -1,0 +1,196 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Levels/Select Level.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/Backgrounds/backgroundColorForest.png" type="Texture" id=2]
+
+[node name="Select Level" type="Control"]
+modulate = Color( 0, 0.835294, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 0, -192 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Lv 1 - 5" type="CenterContainer" parent="."]
+editor/display_folded = true
+margin_left = 288.0
+margin_right = 471.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lv 1 - 5"]
+editor/display_folded = true
+margin_left = 58.0
+margin_top = 242.0
+margin_right = 124.0
+margin_bottom = 358.0
+
+[node name="Lv 1" type="Button" parent="Lv 1 - 5/VBoxContainer"]
+margin_right = 66.0
+margin_bottom = 20.0
+text = "Level 1"
+
+[node name="Lv 2" type="Button" parent="Lv 1 - 5/VBoxContainer"]
+margin_top = 24.0
+margin_right = 66.0
+margin_bottom = 44.0
+text = "Level 2"
+
+[node name="Lv 3" type="Button" parent="Lv 1 - 5/VBoxContainer"]
+margin_top = 48.0
+margin_right = 66.0
+margin_bottom = 68.0
+text = "Level 3"
+
+[node name="Lv 4" type="Button" parent="Lv 1 - 5/VBoxContainer"]
+margin_top = 72.0
+margin_right = 66.0
+margin_bottom = 92.0
+text = " Level 4 "
+
+[node name="Lv 5" type="Button" parent="Lv 1 - 5/VBoxContainer"]
+margin_top = 96.0
+margin_right = 66.0
+margin_bottom = 116.0
+text = " Level 5 "
+
+[node name="Lv 6 - 10" type="CenterContainer" parent="."]
+editor/display_folded = true
+margin_left = 288.0
+margin_right = 721.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lv 6 - 10"]
+margin_left = 183.0
+margin_top = 242.0
+margin_right = 249.0
+margin_bottom = 358.0
+
+[node name="Lv 6" type="Button" parent="Lv 6 - 10/VBoxContainer"]
+margin_right = 66.0
+margin_bottom = 20.0
+text = "Level 6"
+
+[node name="Lv 7" type="Button" parent="Lv 6 - 10/VBoxContainer"]
+margin_top = 24.0
+margin_right = 66.0
+margin_bottom = 44.0
+text = "Level 7"
+
+[node name="Lv 8" type="Button" parent="Lv 6 - 10/VBoxContainer"]
+margin_top = 48.0
+margin_right = 66.0
+margin_bottom = 68.0
+text = "Level 8"
+
+[node name="Lv 9" type="Button" parent="Lv 6 - 10/VBoxContainer"]
+margin_top = 72.0
+margin_right = 66.0
+margin_bottom = 92.0
+text = "Level 9"
+
+[node name="Lv 10" type="Button" parent="Lv 6 - 10/VBoxContainer"]
+margin_top = 96.0
+margin_right = 66.0
+margin_bottom = 116.0
+text = "Level 10"
+
+[node name="Lv 11 - 15" type="CenterContainer" parent="."]
+editor/display_folded = true
+margin_left = 537.0
+margin_right = 721.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lv 11 - 15"]
+editor/display_folded = true
+margin_left = 59.0
+margin_top = 242.0
+margin_right = 125.0
+margin_bottom = 358.0
+
+[node name="Lv 11" type="Button" parent="Lv 11 - 15/VBoxContainer"]
+margin_right = 66.0
+margin_bottom = 20.0
+text = "Level 11"
+
+[node name="Lv 12" type="Button" parent="Lv 11 - 15/VBoxContainer"]
+margin_top = 24.0
+margin_right = 66.0
+margin_bottom = 44.0
+text = "Level 12"
+
+[node name="Lv 13" type="Button" parent="Lv 11 - 15/VBoxContainer"]
+margin_top = 48.0
+margin_right = 66.0
+margin_bottom = 68.0
+text = "Level 13"
+
+[node name="Lv 14" type="Button" parent="Lv 11 - 15/VBoxContainer"]
+margin_top = 72.0
+margin_right = 66.0
+margin_bottom = 92.0
+text = "Level 14"
+
+[node name="Lv 15" type="Button" parent="Lv 11 - 15/VBoxContainer"]
+margin_top = 96.0
+margin_right = 66.0
+margin_bottom = 116.0
+text = "Level 15"
+
+[node name="Top" type="CenterContainer" parent="."]
+editor/display_folded = true
+margin_left = 433.0
+margin_top = 192.0
+margin_right = 575.0
+margin_bottom = 224.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Top"]
+margin_left = 32.0
+margin_top = 9.0
+margin_right = 109.0
+margin_bottom = 23.0
+
+[node name="Select Level" type="Label" parent="Top/VBoxContainer"]
+margin_right = 77.0
+margin_bottom = 14.0
+text = "Select Level"
+
+[node name="Bottom" type="CenterContainer" parent="."]
+editor/display_folded = true
+margin_left = 433.0
+margin_top = 352.0
+margin_right = 579.0
+margin_bottom = 416.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Bottom"]
+editor/display_folded = true
+margin_top = 22.0
+margin_right = 146.0
+margin_bottom = 42.0
+
+[node name="Return" type="Button" parent="Bottom/VBoxContainer2"]
+margin_right = 146.0
+margin_bottom = 20.0
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="Lv 1 - 5/VBoxContainer/Lv 1" to="." method="_on_Lv_1_pressed"]
+[connection signal="pressed" from="Lv 1 - 5/VBoxContainer/Lv 2" to="." method="_on_Lv_2_pressed"]
+[connection signal="pressed" from="Lv 1 - 5/VBoxContainer/Lv 3" to="." method="_on_Lv_3_pressed"]
+[connection signal="pressed" from="Lv 1 - 5/VBoxContainer/Lv 4" to="." method="_on_Lv_4_pressed"]
+[connection signal="pressed" from="Lv 1 - 5/VBoxContainer/Lv 5" to="." method="_on_Lv_5_pressed"]
+[connection signal="pressed" from="Lv 6 - 10/VBoxContainer/Lv 6" to="." method="_on_Lv_6_pressed"]
+[connection signal="pressed" from="Lv 6 - 10/VBoxContainer/Lv 7" to="." method="_on_Lv_7_pressed"]
+[connection signal="pressed" from="Lv 6 - 10/VBoxContainer/Lv 8" to="." method="_on_Lv_8_pressed"]
+[connection signal="pressed" from="Lv 6 - 10/VBoxContainer/Lv 9" to="." method="_on_Lv_9_pressed"]
+[connection signal="pressed" from="Lv 6 - 10/VBoxContainer/Lv 10" to="." method="_on_Lv_10_pressed"]
+[connection signal="pressed" from="Lv 11 - 15/VBoxContainer/Lv 11" to="." method="_on_Lv_11_pressed"]
+[connection signal="pressed" from="Lv 11 - 15/VBoxContainer/Lv 12" to="." method="_on_Lv_12_pressed"]
+[connection signal="pressed" from="Lv 11 - 15/VBoxContainer/Lv 13" to="." method="_on_Lv_13_pressed"]
+[connection signal="pressed" from="Lv 11 - 15/VBoxContainer/Lv 14" to="." method="_on_Lv_14_pressed"]
+[connection signal="pressed" from="Lv 11 - 15/VBoxContainer/Lv 15" to="." method="_on_Lv_15_pressed"]
+[connection signal="pressed" from="Bottom/VBoxContainer2/Return" to="." method="_on_Return_pressed"]

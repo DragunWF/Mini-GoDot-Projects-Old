@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Stuff/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stuff/Goal 3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Stuff/Fall Zone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Stuff/ParallaxBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Stuff/Platform (Sand).tscn" type="PackedScene" id=5]
+
+[node name="Level 3" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1526.96, 891.18 )
+current = true
+zoom = Vector2( 3, 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 244.168, 40.4138 )
+
+[node name="Goal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1728.33, 1569.6 )
+
+[node name="Fall Zone" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1382.78, 2082.3 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+
+[node name="Platform (Sand)" parent="." instance=ExtResource( 5 )]
+position = Vector2( 358.262, 269.008 )
+
+[node name="Platform (Sand)12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1008.89, 322.121 )
+
+[node name="Platform (Sand)9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2550.37, 210.748 )
+
+[node name="Platform (Sand)2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1008.38, 677.054 )
+
+[node name="Platform (Sand)3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1737.55, 457.596 )
+
+[node name="Platform (Sand)4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2439.94, 668.517 )
+
+[node name="Platform (Sand)5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1765.31, 977.985 )
+
+[node name="Platform (Sand)7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1009.81, 1216.39 )
+
+[node name="Platform (Sand)8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 401.996, 958.271 )
+
+[node name="Platform (Sand)6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2461.3, 1302.18 )
+
+[node name="Platform (Sand)10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1747.84, 1684.76 )
+
+[node name="Platform (Sand)11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 392.706, 1572.86 )
+
